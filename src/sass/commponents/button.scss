@@ -1,0 +1,203 @@
+@use '../variables.scss' as a;
+@use '../mixin.scss' as b;
+
+button {
+    font-family: inherit;
+    font-weight: 200;
+    font-size: a.$fontS;
+}
+
+/** Button Gradient */
+.btn_gradient {
+    cursor: pointer;
+    @include b.size(13.5rem, 2.75rem);
+    border: 0;
+    color: white;
+    background-image: linear-gradient(318deg, #FFE3A1, #CA9F3D);
+    background-image: -o-linear-gradient(318deg, #FFE3A1, #CA9F3D);
+    background-image: -moz-linear-gradient(318deg, #FFE3A1, #CA9F3D);
+    background-image: -webkit-linear-gradient(318deg, #FFE3A1, #CA9F3D);
+    box-shadow: 0px 0px 14px 5px #ffca7a8c;
+    transition: 0.3s;
+    position: relative;
+    transition: 0.8s;
+
+    &::before {
+        content: url(/assets/icon/plane-solid.svg);
+        transform: scale(70%, 70%);
+        opacity: 0;
+        transition: 0.8s;
+        @include b.pos_absolute (10px, auto, 40px, auto);
+    }
+
+    &:hover {
+        color: transparent;
+    }
+
+    &:hover::before {
+        opacity: 1;
+        transform: scale(120%, 120%);
+        left: 90px;
+    }
+}
+
+/** Button Animated Icon */
+.btn_icon_animated_wrapper {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+
+    .btn_icon_animated_wrap1 {
+        position: absolute;
+        z-index: a.$layer1;
+        transform: translateY(-0.625rem);
+        transition: 0.8s;
+        @include b.size(10rem, 4rem);
+        @include b.box(transparent, 1px solid a.$colorBorder, 0);
+    } 
+    .btn_icon_animated_wrap2 {
+        display: flex;
+        justify-content: center;
+        z-index: a.$layer2;
+        transition: 0.8s;
+        @include b.size(11.25rem, 2.75rem);
+        @include b.box(transparent, 1px solid a.$colorBorder, 0);
+
+        .btn_icon_animated {
+            cursor: pointer;
+            @include b.size(10rem, 2.75rem);
+            @include b.box(transparent, 0, 0);
+            color: #d6ba77;
+            position: relative;
+            transition: 0.8s;
+            z-index: a.$layer3;
+            font-weight: 300;
+
+            &::before {
+                content: url(/assets/icon/plane-solid.svg);
+                @include b.pos_absolute (10px, auto, 15px, auto);
+                transform: scale(70%, 70%);
+                opacity: 0;
+                transition: 0.8s;
+            }
+        }
+    }
+
+    &:hover .btn_icon_animated::before {
+        opacity: 1;
+        transform: scale(120%, 120%);
+        left: 65px;
+    }
+
+    &:hover .btn_icon_animated {
+        color: transparent;
+        background-color: a.$colorBorder;
+    }
+
+    &:hover .btn_icon_animated_wrap1 {
+        border: 1px solid transparent;
+    }
+
+    &:hover .btn_icon_animated_wrap2 {
+        border: 1px solid transparent;
+    }
+}
+
+/** Button with Icon fade */
+.btn_icon_fade_wrapper {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+
+    .btn_icon_fade_wrap1 {
+        background-color: transparent;
+        position: absolute;
+        width: 11.75rem;
+        height: 4rem;
+        border: 1px solid #d6ba77;
+        z-index: 0;
+        transform: translateY(-0.625rem);
+        transition: 0.8s;
+    }
+
+    .btn_icon_fade_wrap2 {
+        display: flex;
+        justify-content: center;
+        background-color: absolute;
+        width: 13rem;
+        height: 2.75 rem;
+        border: 1px solid #d6ba77;
+        z-index: 10;
+        transition: 0.8s;
+
+        .btn_icon_fade {
+            cursor: pointer;
+            width: 11.75rem;
+            height: 2.75rem;
+            border: 0;
+            color: #d6ba77;
+            background-color: transparent;
+            transition: 0.3s;
+            position: relative;
+            transition: 0.8s;
+            z-index: 100;
+
+            &::before {
+                content: url(/assets/icon/lightbulb-line.svg);
+                position: absolute;
+                top: 12px;
+                left: 88px;
+                opacity: 0;
+                transition: 0.8s;
+                transform: scale(110%, 110%)
+            }
+        }
+    }
+
+    &:hover .btn_icon_fade::before {
+        opacity: 1;
+    }
+
+    &:hover .btn_icon_fade {
+        color: transparent;
+        background-color: #d6ba77;
+    }
+
+    &:hover .btn_icon_fade_wrap1 {
+        border: 1px solid transparent;
+    }
+
+    &:hover .btn_icon_fade_wrap2 {
+        border: 1px solid transparent;
+    }
+}
+
+/** Button with Arrow */
+.btn_arrow {
+    cursor: pointer;
+    width: 10.25rem;
+    height: 2.75rem;
+    border: 0;
+    color: white;
+    background-color: #c8aa6a;
+    position: relative;
+    transition: 0.8s;
+
+    &::before {
+        content: url(/assets/icon/arrow-right.svg);
+        position: absolute;
+        top: 11px;
+        left: 20px;
+        opacity: 0;
+        transition: 0.8s;
+    }
+
+    &:hover {
+        color: transparent;
+    }
+
+    &:hover::before {
+        opacity: 1;
+        left: 65px;
+    }
+}

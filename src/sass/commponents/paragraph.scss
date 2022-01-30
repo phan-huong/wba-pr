@@ -1,0 +1,258 @@
+@use '../variables.scss' as a;
+@use '../mixin.scss' as b;
+
+.paragraph {
+    display: flex;
+    color: white;
+  
+    &__left {
+        width: 55vw;
+        display: flex;
+    
+        img {
+            max-width: 100%;
+            object-fit: cover;
+        }
+    }
+  
+    &__right {
+        width: calc(50vw - 4rem);
+        padding: 2rem;
+        display: flex;
+        position: absolute;
+        right: 0;
+        background-image: linear-gradient(180deg, rgb(26, 24, 24, 0.65), rgb(26, 24, 24, 0.65));
+        background-image: -o-linear-gradient(180deg, rgb(26, 24, 24, 0.65), rgb(26, 24, 24, 0.65));
+        background-image: -moz-linear-gradient(180deg, rgb(26, 24, 24, 0.65), rgb(26, 24, 24, 0.65));
+        background-image: -webkit-linear-gradient(180deg, rgb(26, 24, 24, 0.65), rgb(26, 24, 24, 0.65));
+        backdrop-filter: brightness(120%) blur(14px);
+        -webkit-backdrop-filter: brightness(120%) blur(14px);
+    
+        &__inner {
+            border: 1px solid #d6ba77;
+            max-height: 100%;
+            padding: 8rem;
+
+            .paragraph__headlines {
+                h3 {
+                    @include b.font (a.$fontM, 200, white);
+                    text-transform: uppercase;
+                    margin: 0;
+                    padding-bottom: 1rem
+                }
+                h2 {
+                    @include b.font (2.5rem, 200, a.$colorHeadL);
+                    @include b.font-fam('meno-banner', serif);
+                    margin: 0;
+                }
+            }
+
+            .paragraph__content {
+                padding: 2rem 0;
+
+                p {
+                    font-size: a.$fontS;
+                }
+            }
+        }
+    }
+
+    .btn_icon_fade_wrapper {
+        width: fit-content;
+        padding-top: 2rem;
+    }
+}
+
+.paragraph_high {
+    .paragraph__right {
+        transform: translateY(-6rem);
+    }
+    &.paragraph {
+        padding-top: 10rem;
+        padding-bottom: 4rem;
+    }
+}
+
+.paragraph_low {
+    .paragraph__right {
+        transform: translateY(6rem);
+    }
+    &.paragraph {
+        padding-top: 4rem;
+        padding-bottom: 10rem;
+    }
+}
+
+@media screen and (max-width: 1799px) {
+    .paragraph {
+        &__right {
+            &__inner {
+                padding: 6rem;
+                .paragraph__content {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1550px) {
+    .paragraph {
+        &__right {
+            &__inner {
+                padding: 4rem;
+                .paragraph__content {
+                    p {
+                        font-size: a.$fontXS;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1360px) {
+    .paragraph {
+        &__right {
+            &__inner {
+                .paragraph__headlines {
+                    h3 {
+                        font-size: a.$fontS;
+                        padding-bottom: 0.5rem;
+                    }
+                    h2 {
+                        font-size: 2rem;
+                    }
+                }
+                .paragraph__content {
+                    p {
+                        font-size: a.$fontXXS;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .paragraph {
+        &__right {
+            &__inner {
+                padding: 2rem;
+                .paragraph__headlines {
+                    h3 {
+                        font-size: a.$fontXS;
+                        padding-bottom: 0.5rem;
+                    }
+                    h2 {
+                        font-size: 1.8rem;
+                    }
+                }
+                .paragraph__content {
+                    p {
+                        font-size: 0.75rem;
+                    }
+                }
+                .btn_icon_fade_wrapper {
+                    padding-top: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .paragraph {
+        flex-direction: column;
+        padding-top: 4rem !important;
+        padding-bottom: 0 !important;
+
+        &__left {
+            width: 100vw;
+        }
+
+        &__right {
+            height: auto;
+            position: relative;
+            width: calc(100vw - 4rem);
+            transform: translateY(-4rem) !important;
+
+            &__inner {
+                padding: 2rem;
+                .paragraph__headlines {
+                    h3 {
+                        font-size: a.$fontM;
+                        padding-bottom: 1rem;
+                    }
+                    h2 {
+                        font-size: 2.5rem;
+                    }
+                }
+                .paragraph__content {
+                    p {
+                        font-size: 1rem;
+                    }
+                }
+                .btn_icon_fade_wrapper {
+                    padding-top: 2rem;
+                    padding-bottom: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .paragraph {
+        &__right {
+            &__inner {
+                .paragraph__headlines {
+                    h3 {
+                        font-size: a.$fontS;
+                        padding-bottom: 0.5rem;
+                    }
+                    h2 {
+                        font-size: 2rem;
+                    }
+                }
+                .paragraph__content {
+                    p {
+                        font-size: a.$fontXS;
+                    }
+                }
+                .btn_icon_fade_wrapper {
+                    padding-top: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .paragraph {
+        &__right {
+            padding: 1.5rem;
+            width: calc(100vw - 3rem);
+            &__inner {
+                padding: 1.5rem;
+                .paragraph__headlines {
+                    h3 {
+                        font-size: a.$fontXS;
+                        padding-bottom: 0.5rem;
+                    }
+                    h2 {
+                        font-size: 1.8rem;
+                    }
+                }
+                .paragraph__content {
+                    p {
+                        font-size: a.$fontXXS;
+                    }
+                }
+                .btn_icon_fade_wrapper {
+                    padding-top: 1.5rem;
+                }
+            }
+        }
+    }
+}

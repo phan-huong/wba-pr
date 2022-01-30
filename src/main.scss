@@ -1,0 +1,28 @@
+@use './sass/variables.scss' as a;
+@use './sass/mixin.scss' as b;
+
+.main_body {
+    width: 100vw !important;
+    max-width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: a.$colorBkg;
+    font-style: normal;
+    @include b.font(inherit, 200, a.$colorHeadL);
+    @include b.font-fam('Switzer', sans-serif);
+    overflow-anchor: none;
+    // font-family: 'meno-banner', serif;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+@import './sass/commponents/button.scss';
+@import './sass/commponents/collapse.scss';
+@import './sass/commponents/footer.scss';
+@import './sass/commponents/hero.scss';
+@import './sass/commponents/nav.scss';
+@import './sass/commponents/nav_mobile.scss';
+@import './sass/commponents/paragraph.scss';

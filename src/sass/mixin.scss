@@ -1,0 +1,46 @@
+@use './variables.scss' as a;
+
+@mixin size ($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+@mixin layout ($p_topbottom, $p_leftright, $display) {
+    padding: $p_topbottom $p_leftright;
+    display: $display;
+}
+
+@mixin pos_absolute ($top, $bottom, $left, $right) {
+    position: absolute;
+    top: $top;
+    bottom: $bottom;
+    left: $left;
+    right: $right
+}
+
+@mixin flex ($direction, $justcontent, $justitem, $alignitem) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justcontent;
+    justify-items: $justitem;
+    align-items: $alignitem;
+}
+
+@mixin font-fam ($font, $fam) {
+    font-family: $font, $fam;
+}
+
+@mixin font ($fontsize, $fontweight, $color) {
+    font-size: $fontsize;
+    font-weight: $fontweight;
+    color: $color;
+}
+
+@mixin box ($bkgcolor, $border, $radius: 0) {
+    background-color: $bkgcolor;
+    border: $border;
+    @if $radius != 0 {
+        border-radius: $radius;
+    }
+}
+
