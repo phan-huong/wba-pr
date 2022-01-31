@@ -1338,6 +1338,14 @@ footer .footer__wrapper__inner .footer__info__sitemap__items li:not(:first-of-ty
   padding-bottom: 10rem;
 }
 
+.para_reverse {
+  flex-direction: row-reverse;
+}
+.para_reverse .paragraph__right {
+  right: auto;
+  left: 0;
+}
+
 @media screen and (max-width: 1799px) {
   .paragraph__right__inner {
     padding: 6rem;

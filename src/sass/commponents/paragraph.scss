@@ -83,6 +83,15 @@
     }
 }
 
+.para_reverse {
+    flex-direction: row-reverse;
+
+    .paragraph__right {
+        right: auto;
+        left: 0;
+    }
+}
+
 @media screen and (max-width: 1799px) {
     .paragraph {
         &__right {

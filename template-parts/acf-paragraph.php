@@ -1,18 +1,19 @@
 <?php
 if( get_row_layout() == 'paragraph' ) : 
-    $img_links = get_sub_field('img_links');
+    $para_image = get_sub_field('para_image');
+    $layout = get_sub_field('layout');
     
-    if( have_rows('inhalte_rechts') ) : 
-        while ( have_rows('inhalte_rechts') ) : the_row(); 
+    if( have_rows('inhalte') ) : 
+        while ( have_rows('inhalte') ) : the_row(); 
             $position = get_sub_field('position');
             $headline_S = get_sub_field('headline_S'); 
             $headline_L = get_sub_field('headline_L'); 
             $texte = get_sub_field('texte'); 
             $hat_button = get_sub_field('hat_button'); ?>
 
-            <section class="paragraph <?php echo ($position == 'oben') ? 'paragraph_high' : 'paragraph_low'?>">
+            <section class="paragraph <?php echo ($position == 'oben') ? 'paragraph_high' : 'paragraph_low'?><?php echo ($layout == 'img_links') ? '' : ' para_reverse'?>">
                 <div class="paragraph__left" id="left">
-                    <img src="<?php echo $img_links ?>" alt="<?php echo $headline_L ?>">
+                    <img src="<?php echo $para_image ?>" alt="<?php echo $headline_L ?>">
                 </div>
                 <div class="paragraph__right" id="right">
                     <div class="paragraph__right__inner">
