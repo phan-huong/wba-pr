@@ -1,0 +1,257 @@
+@use '../variables.scss' as a;
+@use '../mixin.scss' as b;
+
+$item_h: calc(100vw / 3);
+
+.cards__wrapper {
+    padding-top: a.$spaceXL;
+
+    .cards__headlines {
+        padding: 0 6rem;
+
+        h3 {
+            @include b.font(a.$fontL, 200, white);
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        h2 {
+            @include b.font(2.5rem, 200, inherit);
+            @include b.font-fam('meno-banner', serif);
+            margin: 0;
+            padding-top: 1rem;
+        }
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        padding: a.$spaceXL 0;
+    
+        .cards__item__hover {
+            position: absolute;
+            transition: 1s;
+            opacity: 0;
+            color: white;
+            padding: 0 2rem 2rem 2rem;
+            top: calc($item_h * 2/5 );
+            cursor: default;
+        }
+        .cards__item {
+            position: relative;
+            &:hover > img {
+                display: none;
+            }
+            &:hover .cards__item__hover {
+                display: block;
+                opacity: 1;
+                top: calc($item_h * 1/5 );
+            }
+        }
+    
+        &__first_row {
+            width: 100vw;
+            display: grid;
+            & > div {
+                    height: $item_h;
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    justify-items: center;
+                    align-items: flex-end;
+                img {
+                    width: 30%;
+                    height: auto;
+                }
+                button {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+        
+        &__second_row {
+            width: 100vw;
+            display: grid;
+            & > div {
+                    height: $item_h;
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    justify-items: center;
+                    align-items: flex-end;
+                img {
+                    width: 40%;
+                    height: auto;
+                }
+                button {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1360px) {
+    .cards__wrapper {
+        .cards {
+            .cards__item__hover {
+                top: calc($item_h * 3/7 );
+            }
+            .cards__item {
+                &:hover .cards__item__hover {
+                    top: calc($item_h * 1/7 );
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1240px) {
+    .cards__wrapper {
+        .cards {
+            .cards__item__hover {
+                top: calc($item_h * 4/10 );
+            }
+            .cards__item {
+                &:hover .cards__item__hover {
+                    top: calc($item_h * 1/14 );
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .cards__wrapper {
+        .cards {
+            .cards__item__hover {
+                top: calc($item_h * 4/10 );
+                p {
+                    font-size: a.$fontXXS;
+                }
+            }
+            .cards__item {
+                &:hover .cards__item__hover {
+                    top: calc($item_h * 1/14 );
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cards__wrapper {
+        padding-top: a.$spaceM;
+
+        .cards {
+            padding: 2rem 0;
+
+            .cards__item__hover {
+                top: calc($item_h * 4/10 );
+                padding: 1rem;
+                h4 {
+                    font-size: a.$fontXXS;
+                    margin-top: 0;
+                }
+                p {
+                    font-size: 0.75rem;
+                }
+            }
+            .cards__item {
+                &:hover .cards__item__hover {
+                    top: 0rem;
+                }
+            }
+
+            &__first_row {
+                & > div {
+                    button {
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+
+            &__second_row {
+                & > div {
+                    button {
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .cards__wrapper {
+        padding-top: a.$spaceM;
+
+        .cards__headlines {
+            padding: 0 3rem;
+
+            h3 {
+                font-size: a.$fontM;
+            }
+            h2 {
+                font-size: 2rem;
+            }
+        }
+
+        .cards {
+            padding: 2rem 0;
+
+            .cards__item__hover {
+                top: calc($item_h * 4/10 );
+                h4 {
+                    font-size: a.$fontS;
+                    margin-top: 1.33em;
+                }
+                p {
+                    font-size: a.$fontS;
+                }
+            }
+            .cards__item {
+                &:hover .cards__item__hover {
+                    top: calc($item_h * 1/14 );
+                }
+            }
+
+            &__first_row {
+                & > div {
+                    height: 100vw;
+                    button {
+                        margin-bottom: 2rem;
+                    }
+                }
+            }
+
+            &__second_row {
+                & > div {
+                    height: 100vw;
+                    button {
+                        margin-bottom: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .cards__wrapper {
+        padding-top: a.$spaceM;
+
+        .cards__headlines {
+            padding: 0 2rem;
+
+            h3 {
+                font-size: a.$fontS;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        .cards {
+            padding: 2rem 0;
+        }
+    }
+}

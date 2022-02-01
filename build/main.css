@@ -215,6 +215,203 @@ button {
   left: 65px;
 }
 
+.cards__wrapper {
+  padding-top: 4rem;
+}
+.cards__wrapper .cards__headlines {
+  padding: 0 6rem;
+}
+.cards__wrapper .cards__headlines h3 {
+  font-size: 1.25rem;
+  font-weight: 200;
+  color: white;
+  text-transform: uppercase;
+  margin: 0;
+}
+.cards__wrapper .cards__headlines h2 {
+  font-size: 2.5rem;
+  font-weight: 200;
+  color: inherit;
+  font-family: "meno-banner", serif;
+  margin: 0;
+  padding-top: 1rem;
+}
+.cards__wrapper .cards {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 0;
+}
+.cards__wrapper .cards .cards__item__hover {
+  position: absolute;
+  transition: 1s;
+  opacity: 0;
+  color: white;
+  padding: 0 2rem 2rem 2rem;
+  top: 13.3333333333vw;
+  cursor: default;
+}
+.cards__wrapper .cards .cards__item {
+  position: relative;
+}
+.cards__wrapper .cards .cards__item:hover > img {
+  display: none;
+}
+.cards__wrapper .cards .cards__item:hover .cards__item__hover {
+  display: block;
+  opacity: 1;
+  top: 6.6666666667vw;
+}
+.cards__wrapper .cards__first_row {
+  width: 100vw;
+  display: grid;
+}
+.cards__wrapper .cards__first_row > div {
+  height: 33.3333333333vw;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: flex-end;
+}
+.cards__wrapper .cards__first_row > div img {
+  width: 30%;
+  height: auto;
+}
+.cards__wrapper .cards__first_row > div button {
+  margin-bottom: 2rem;
+}
+.cards__wrapper .cards__second_row {
+  width: 100vw;
+  display: grid;
+}
+.cards__wrapper .cards__second_row > div {
+  height: 33.3333333333vw;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: flex-end;
+}
+.cards__wrapper .cards__second_row > div img {
+  width: 40%;
+  height: auto;
+}
+.cards__wrapper .cards__second_row > div button {
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 1360px) {
+  .cards__wrapper .cards .cards__item__hover {
+    top: 14.2857142857vw;
+  }
+  .cards__wrapper .cards .cards__item:hover .cards__item__hover {
+    top: 4.7619047619vw;
+  }
+}
+@media screen and (max-width: 1240px) {
+  .cards__wrapper .cards .cards__item__hover {
+    top: 13.3333333333vw;
+  }
+  .cards__wrapper .cards .cards__item:hover .cards__item__hover {
+    top: 2.380952381vw;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .cards__wrapper .cards .cards__item__hover {
+    top: 13.3333333333vw;
+  }
+  .cards__wrapper .cards .cards__item__hover p {
+    font-size: 0.8rem;
+  }
+  .cards__wrapper .cards .cards__item:hover .cards__item__hover {
+    top: 2.380952381vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cards__wrapper {
+    padding-top: 2rem;
+  }
+  .cards__wrapper .cards {
+    padding: 2rem 0;
+  }
+  .cards__wrapper .cards .cards__item__hover {
+    top: 13.3333333333vw;
+    padding: 1rem;
+  }
+  .cards__wrapper .cards .cards__item__hover h4 {
+    font-size: 0.8rem;
+    margin-top: 0;
+  }
+  .cards__wrapper .cards .cards__item__hover p {
+    font-size: 0.75rem;
+  }
+  .cards__wrapper .cards .cards__item:hover .cards__item__hover {
+    top: 0rem;
+  }
+  .cards__wrapper .cards__first_row > div button {
+    margin-bottom: 1rem;
+  }
+  .cards__wrapper .cards__second_row > div button {
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 540px) {
+  .cards__wrapper {
+    padding-top: 2rem;
+  }
+  .cards__wrapper .cards__headlines {
+    padding: 0 3rem;
+  }
+  .cards__wrapper .cards__headlines h3 {
+    font-size: 1.125rem;
+  }
+  .cards__wrapper .cards__headlines h2 {
+    font-size: 2rem;
+  }
+  .cards__wrapper .cards {
+    padding: 2rem 0;
+  }
+  .cards__wrapper .cards .cards__item__hover {
+    top: 13.3333333333vw;
+  }
+  .cards__wrapper .cards .cards__item__hover h4 {
+    font-size: 1rem;
+    margin-top: 1.33em;
+  }
+  .cards__wrapper .cards .cards__item__hover p {
+    font-size: 1rem;
+  }
+  .cards__wrapper .cards .cards__item:hover .cards__item__hover {
+    top: 2.380952381vw;
+  }
+  .cards__wrapper .cards__first_row > div {
+    height: 100vw;
+  }
+  .cards__wrapper .cards__first_row > div button {
+    margin-bottom: 2rem;
+  }
+  .cards__wrapper .cards__second_row > div {
+    height: 100vw;
+  }
+  .cards__wrapper .cards__second_row > div button {
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .cards__wrapper {
+    padding-top: 2rem;
+  }
+  .cards__wrapper .cards__headlines {
+    padding: 0 2rem;
+  }
+  .cards__wrapper .cards__headlines h3 {
+    font-size: 1rem;
+  }
+  .cards__wrapper .cards__headlines h2 {
+    font-size: 1.5rem;
+  }
+  .cards__wrapper .cards {
+    padding: 2rem 0;
+  }
+}
 .collapse_wrapper {
   padding-top: 4rem;
 }
