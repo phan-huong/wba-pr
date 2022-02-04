@@ -17,27 +17,12 @@
         if( have_rows('hero_infobox') ): 
             while ( have_rows('hero_infobox') ) : the_row(); 
                 $infobox_titel_S = get_sub_field('infobox_titel_S');
-                $infobox_titel_L = get_sub_field('infobox_titel_L'); 
-                $hat_button = get_sub_field('hat_button'); ?>
+                $infobox_titel_L = get_sub_field('infobox_titel_L'); ?>
 
-                <div class="hero_infobox<?php echo ($hat_button) ? null : ' no_btn' ?>">
+                <div class="hero_infobox">
                     <div class="hero_infobox__inner">
                         <h2><?php echo $infobox_titel_S ?></h2>
                         <h1><?php echo $infobox_titel_L ?></h1>
-
-                        <?php if ($hat_button) : 
-                            $button_text = get_sub_field('button_text');
-                            $button_link = get_sub_field('button_link'); ?>
-                            
-                            <div class="btn_icon_animated_wrapper">
-                                <div class="btn_icon_animated_wrap1"></div>
-                                <div class="btn_icon_animated_wrap2">
-                                    <button class="btn_icon_animated" onclick="window.open('<?php echo $button_link ?>')">
-                                        <?php echo $button_text ?>
-                                    </button>
-                                </div>
-                            </div>
-                        <?php endif; ?>
                     </div>
                 </div>
             <?php endwhile;

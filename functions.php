@@ -41,6 +41,66 @@ function init_remove_support()  {
     remove_post_type_support($post_type, 'editor');
 }
 
+/** Register Custom Post Type */
+function create_kunden_post_type() {
+    $label = array(
+        'name' => 'Kunden',
+        'singular_name' => 'Kunde'
+    );
+	$args = array(
+        'labels' => $label,
+        'description' => 'Kunden von WBA PR',
+        'supports' => array(
+            'title',
+            'author',
+            'thumbnail',
+            'comments',
+            'revisions',
+            'custom-fields'
+            ),
+        'taxonomies' => array( 
+            'category', 
+            'post_tag' 
+        ),
+        'has_archive' => true,
+        'hierarchical' => false,
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'show_in_nav_menus' => true,
+        'show_in_admin_bar' => true,
+        'menu_icon' => 'dashicons-groups',
+        'capability_type' => 'post'
+	);
+	register_post_type( 'kunden' , $args );
+}
+
+add_action( 'init', 'create_kunden_post_type' );
+
+
+/** Polylang translate slug - deactivated */
+add_filter('pll_translated_post_type_rewrite_slugs', function($post_type_translated_slugs) {
+	// Add translation for "Kunden" post type.
+	$post_type_translated_slugs = array(
+		'kunden' => array(
+			'de' => array(
+				'has_archive' => true,
+				'rewrite' => array(
+					'slug' => 'kunden',
+				),
+			),
+			'en' => array(
+				'has_archive' => true,
+				'rewrite' => array(
+					'slug' => 'customers',
+				),
+			),
+		),
+	);
+	return $post_type_translated_slugs;
+});
+
+
 /** Register customized options page */
 if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page(array(
@@ -64,6 +124,14 @@ if( function_exists('acf_add_options_page') ) {
 	acf_add_options_sub_page(array(
 		'page_title' 	=> 'Footer',
 		'menu_title'	=> 'Footer',
+		'parent_slug'	=> 'theme-general-options',
+        'update_button' => __('Update', 'acf'),
+        'updated_message' => __("Options updated!", 'acf')
+	));
+
+    acf_add_options_sub_page(array(
+		'page_title' 	=> 'Kunden Archive',
+		'menu_title'	=> 'Kunden',
 		'parent_slug'	=> 'theme-general-options',
         'update_button' => __('Update', 'acf'),
         'updated_message' => __("Options updated!", 'acf')

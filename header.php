@@ -19,5 +19,5 @@
             <!-- Navigation bar -->
             <?php get_template_part('template-parts/general', 'navigation'); ?>
             <!-- Page Hero -->
-            <?php get_template_part('template-parts/general', 'hero'); ?>
+            <?php is_post_type_archive( 'kunden' ) ? get_template_part('template-parts/kunden', 'hero') : get_template_part('template-parts/general', 'hero'); ?>
         </header>
