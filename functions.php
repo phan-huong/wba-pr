@@ -77,6 +77,8 @@ function create_kunden_post_type() {
 
 add_action( 'init', 'create_kunden_post_type' );
 
+add_theme_support( 'post-thumbnails', array( 'kunden' ) );
+
 
 /** Polylang translate slug - deactivated */
 add_filter('pll_translated_post_type_rewrite_slugs', function($post_type_translated_slugs) {

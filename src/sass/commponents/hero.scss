@@ -6,12 +6,12 @@
   padding-bottom: a.$spaceXL;
 
   &__video {
-      @include b.size(100vw, 100vh);
+      @include b.size(100%, 100vh);
       object-fit: cover;
   }
 
   &__img {
-    @include b.size(100vw, 100vh);
+    @include b.size(100%, 100vh);
     object-fit: cover;
   }
 
@@ -64,10 +64,10 @@
 @media screen and (max-width: 1024px) {
   .page_hero {
     &__video {
-      @include b.size(100vw, 80vh);
+      @include b.size(100%, 80vh);
     }
     &__img {
-      @include b.size(100vw, 80vh);
+      @include b.size(100%, 80vh);
     }
     .hero_infobox {
       top: 30vh;
@@ -81,14 +81,14 @@
     flex-direction: column;
     padding-bottom: 0;
     &__video {
-      @include b.size(100vw, 80vh);
+      @include b.size(100%, 80vh);
     }
     &__img {
-      @include b.size(100vw, 80vh);
+      @include b.size(100%, 80vh);
     }
     .hero_infobox {
       position: relative;
-      width: calc(100vw - 4rem);
+      width: calc(100% - 4rem);
       left: 0;
       top: 0;
       transform: translateY(-4rem);
@@ -102,14 +102,14 @@
     flex-direction: column;
     padding-bottom: 0;
     &__video {
-      @include b.size(100vw, 60vh);
+      @include b.size(100%, 60vh);
     }
     &__img {
-      @include b.size(100vw, 60vh);
+      @include b.size(100%, 60vh);
     }
     .hero_infobox {
       position: relative;
-      width: calc(100vw - 4rem);
+      width: calc(100% - 4rem);
       left: 0;
       top: 0;
       transform: translateY(-2rem);
@@ -131,14 +131,14 @@
     flex-direction: column;
     padding-bottom: 0;
     &__video {
-      @include b.size(100vw, 60vh);
+      @include b.size(100%, 60vh);
     }
     &__img {
-      @include b.size(100vw, 60vh);
+      @include b.size(100%, 60vh);
     }
     .hero_infobox {
       position: relative;
-      width: calc(100vw - 4rem);
+      width: calc(100% - 4rem);
       left: 0;
       top: 0;
       transform: translateY(-2rem);

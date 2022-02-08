@@ -873,12 +873,12 @@ footer .footer__wrapper__inner .footer__info__sitemap__items li:not(:first-of-ty
   padding-bottom: 4rem;
 }
 .page_hero__video {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   object-fit: cover;
 }
 .page_hero__img {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   object-fit: cover;
 }
@@ -936,11 +936,11 @@ footer .footer__wrapper__inner .footer__info__sitemap__items li:not(:first-of-ty
 }
 @media screen and (max-width: 1024px) {
   .page_hero__video {
-    width: 100vw;
+    width: 100%;
     height: 80vh;
   }
   .page_hero__img {
-    width: 100vw;
+    width: 100%;
     height: 80vh;
   }
   .page_hero .hero_infobox {
@@ -954,16 +954,16 @@ footer .footer__wrapper__inner .footer__info__sitemap__items li:not(:first-of-ty
     padding-bottom: 0;
   }
   .page_hero__video {
-    width: 100vw;
+    width: 100%;
     height: 80vh;
   }
   .page_hero__img {
-    width: 100vw;
+    width: 100%;
     height: 80vh;
   }
   .page_hero .hero_infobox {
     position: relative;
-    width: calc(100vw - 4rem);
+    width: calc(100% - 4rem);
     left: 0;
     top: 0;
     transform: translateY(-4rem);
@@ -976,16 +976,16 @@ footer .footer__wrapper__inner .footer__info__sitemap__items li:not(:first-of-ty
     padding-bottom: 0;
   }
   .page_hero__video {
-    width: 100vw;
+    width: 100%;
     height: 60vh;
   }
   .page_hero__img {
-    width: 100vw;
+    width: 100%;
     height: 60vh;
   }
   .page_hero .hero_infobox {
     position: relative;
-    width: calc(100vw - 4rem);
+    width: calc(100% - 4rem);
     left: 0;
     top: 0;
     transform: translateY(-2rem);
@@ -1004,16 +1004,16 @@ footer .footer__wrapper__inner .footer__info__sitemap__items li:not(:first-of-ty
     padding-bottom: 0;
   }
   .page_hero__video {
-    width: 100vw;
+    width: 100%;
     height: 60vh;
   }
   .page_hero__img {
-    width: 100vw;
+    width: 100%;
     height: 60vh;
   }
   .page_hero .hero_infobox {
     position: relative;
-    width: calc(100vw - 4rem);
+    width: calc(100% - 4rem);
     left: 0;
     top: 0;
     transform: translateY(-2rem);
@@ -1025,11 +1025,80 @@ footer .footer__wrapper__inner .footer__info__sitemap__items li:not(:first-of-ty
     font-size: 1.5rem;
   }
 }
+.kunden {
+  max-width: 100%;
+}
+.kunden__wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 6rem;
+  grid-gap: 4rem;
+  max-width: 100%;
+}
+.kunden__item {
+  background-size: 100% 100%;
+  background-position: center;
+  position: relative;
+  display: flex;
+}
+.kunden__item img:first-of-type {
+  max-width: 100% !important;
+  height: auto;
+  object-fit: cover;
+  opacity: 0.45;
+  transition: 0.5s;
+}
+.kunden__item:hover img:first-of-type {
+  -webkit-filter: blur(4px) brightness(30%);
+  /* Chrome, Safari, Opera */
+  filter: blur(4px) brightness(30%);
+}
+.kunden__item:hover img:nth-of-type(2) {
+  -webkit-filter: brightness(120%);
+  /* Chrome, Safari, Opera */
+  filter: brightness(120%);
+}
+.kunden__item__logo {
+  position: absolute;
+  top: 0;
+  width: 70%;
+  height: 70%;
+  padding: 15%;
+}
+.kunden__item__link {
+  position: absolute;
+  bottom: 0%;
+  opacity: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  z-index: 500;
+  transition: 0.5s;
+}
+.kunden__item__link a {
+  width: fit-content;
+  cursor: pointer;
+}
+.kunden__item:hover .kunden__item__link {
+  bottom: 10%;
+  opacity: 1;
+}
+.kunden__item__border {
+  width: 90%;
+  height: 90%;
+  top: 5%;
+  left: 5%;
+  border: 1px solid #d6ba77;
+  position: absolute;
+}
+
 .nav {
   position: fixed;
   display: flex;
   justify-content: space-between;
-  width: calc(100vw - 8rem);
+  width: calc(100% - 6rem);
   margin: 1.5rem 3rem;
   background-color: #262626;
   font-size: 1.125rem;
@@ -1099,7 +1168,7 @@ footer .footer__wrapper__inner .footer__info__sitemap__items li:not(:first-of-ty
   .nav {
     font-size: 1rem;
     margin: 1.5rem 2rem;
-    width: calc(100vw - 4rem);
+    width: calc(100% - 4rem);
   }
   .nav__menu .nav__wrapper {
     padding-left: 1rem;

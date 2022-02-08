@@ -5,7 +5,7 @@
     position: fixed;
     display: flex;
     justify-content: space-between;
-    width: calc(100vw - a.$spaceXXXL);
+    width: calc(100% - a.$spaceXXL);
     margin: 1.5rem a.$spaceL;
     background-color: a.$colorMenu;
     font-size: a.$fontM;
@@ -86,7 +86,7 @@
     .nav {
         font-size: a.$fontS;
         margin: 1.5rem a.$spaceM;
-        width: calc(100vw - a.$spaceXL);
+        width: calc(100% - a.$spaceXL);
 
         &__menu {
     
