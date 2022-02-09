@@ -201,3 +201,23 @@ button {
         left: 65px;
     }
 }
+
+
+/** Load more Button */
+.load_more_btn {
+    display: flex;
+    justify-content: center;
+
+    button {
+        padding: 0.75rem 2.5rem;
+        background-color: #C8AA6A;
+        color: white;
+        transition: 0.3s;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #A28048;
+        }
+    }
+}

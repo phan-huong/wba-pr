@@ -9,9 +9,10 @@ if( get_row_layout() == 'paragraph' ) :
             $headline_S = get_sub_field('headline_S'); 
             $headline_L = get_sub_field('headline_L'); 
             $texte = get_sub_field('texte'); 
-            $hat_button = get_sub_field('hat_button'); ?>
+            $hat_button = get_sub_field('hat_button'); 
+            $section_id = generate_id($headline_L) ?>
 
-            <section class="paragraph <?php echo ($position == 'oben') ? 'paragraph_high' : 'paragraph_low'?><?php echo ($layout == 'img_links') ? '' : ' para_reverse'?>">
+            <section class="paragraph <?php echo ($position == 'oben') ? 'paragraph_high' : 'paragraph_low'?><?php echo ($layout == 'img_links') ? '' : ' para_reverse'?>" id="<?php echo $section_id ?>">
                 <div class="paragraph__left" id="left">
                     <img src="<?php echo $para_image ?>" alt="<?php echo $headline_L ?>">
                 </div>

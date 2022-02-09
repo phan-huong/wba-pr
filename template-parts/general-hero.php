@@ -1,5 +1,5 @@
 <section class="page_hero">
-    <?php 
+    <?php
     $vid_or_img = get_field('vid_or_img');
     $hero_img = get_field('hero_img');
     $hero_video = get_field('hero_video');

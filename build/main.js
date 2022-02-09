@@ -30,6 +30,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/js/loadmore.js":
+/*!****************************!*\
+  !*** ./src/js/loadmore.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"loadmore\": () => (/* binding */ loadmore)\n/* harmony export */ });\nvar loadmore = function loadmore() {\n  jQuery(document).ready(function ($) {\n    // $(\".kunden__item\").slice(0, 4).show();\n    $(\"#loadmore\").on(\"click\", function (e) {\n      e.preventDefault();\n      $(\".kunden__item:hidden\").slice(0, 4).slideDown({\n        start: function start() {\n          $(this).css({\n            display: \"flex\"\n          });\n        }\n      });\n\n      if ($(\".kunden__item:hidden\").length == 0) {\n        $(\"#loadmore\").hide(300);\n      }\n    });\n  });\n};\n\n//# sourceURL=webpack://wba-pr/./src/js/loadmore.js?");
+
+/***/ }),
+
 /***/ "./src/js/nav.js":
 /*!***********************!*\
   !*** ./src/js/nav.js ***!
@@ -56,7 +66,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.scss */ \"./src/main.scss\");\n/* harmony import */ var _js_nav_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/nav.js */ \"./src/js/nav.js\");\n/* harmony import */ var _js_collapse_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/collapse.js */ \"./src/js/collapse.js\");\n/* harmony import */ var _js_paragraph_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/paragraph.js */ \"./src/js/paragraph.js\");\n/* harmony import */ var _js_footer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/footer */ \"./src/js/footer.js\");\n\n\n\n\n\n(0,_js_nav_js__WEBPACK_IMPORTED_MODULE_1__.nav_mobile)();\n(0,_js_collapse_js__WEBPACK_IMPORTED_MODULE_2__.collapse)();\n\nvar loadAndResize = function loadAndResize() {\n  (0,_js_paragraph_js__WEBPACK_IMPORTED_MODULE_3__.paragraph)();\n  (0,_js_footer__WEBPACK_IMPORTED_MODULE_4__.footer)();\n};\n\nwindow.onload = loadAndResize;\nwindow.onresize = loadAndResize;\n\n//# sourceURL=webpack://wba-pr/./src/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.scss */ \"./src/main.scss\");\n/* harmony import */ var _js_nav_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/nav.js */ \"./src/js/nav.js\");\n/* harmony import */ var _js_collapse_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/collapse.js */ \"./src/js/collapse.js\");\n/* harmony import */ var _js_paragraph_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./js/paragraph.js */ \"./src/js/paragraph.js\");\n/* harmony import */ var _js_footer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/footer */ \"./src/js/footer.js\");\n/* harmony import */ var _js_loadmore__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./js/loadmore */ \"./src/js/loadmore.js\");\n\n\n\n\n\n\n(0,_js_nav_js__WEBPACK_IMPORTED_MODULE_1__.nav_mobile)();\n(0,_js_collapse_js__WEBPACK_IMPORTED_MODULE_2__.collapse)();\n(0,_js_loadmore__WEBPACK_IMPORTED_MODULE_5__.loadmore)();\n\nvar loadAndResize = function loadAndResize() {\n  (0,_js_paragraph_js__WEBPACK_IMPORTED_MODULE_3__.paragraph)();\n  (0,_js_footer__WEBPACK_IMPORTED_MODULE_4__.footer)();\n};\n\nwindow.onload = loadAndResize;\nwindow.onresize = loadAndResize;\n\n//# sourceURL=webpack://wba-pr/./src/main.js?");
 
 /***/ }),
 

@@ -147,6 +147,16 @@ function rand_id() {
     return $rand_id;
 }
 
+// Function to convert input string into id
+function generate_id($name) {
+    $underscore = preg_replace('/\s+/', '_', $name);
+    $replaceand = preg_replace('/&/', 'and', $underscore);
+    $onlytext = preg_replace('/[^A-Za-z0-9_]/', '', $replaceand);
+  	$name_id = strtolower($onlytext);
+      
+  	return $name_id;
+}
+
 /* ACF Constructor Hover Module Effect */
 add_action('acf/input/admin_head', 'my_acf_admin_head');
 
@@ -222,4 +232,8 @@ add_action( 'acf/input/admin_head', function() use ($id, $img) {
     </script>
     <?php
 });
+
+
+flush_rewrite_rules( false );
+
 ?>

@@ -199,7 +199,8 @@ $item_h: calc(100vw / 3);
             padding: 2rem 0;
 
             .cards__item__hover {
-                top: calc($item_h * 4/10 );
+                padding: 0 2rem 2rem 2rem;
+                top: calc($item_h * 2/5 );
                 h4 {
                     font-size: a.$fontS;
                     margin-top: 1.33em;
@@ -210,7 +211,7 @@ $item_h: calc(100vw / 3);
             }
             .cards__item {
                 &:hover .cards__item__hover {
-                    top: calc($item_h * 1/14 );
+                    top: calc($item_h * 1/5 );
                 }
             }
 
@@ -252,6 +253,23 @@ $item_h: calc(100vw / 3);
 
         .cards {
             padding: 2rem 0;
+
+            .cards__item__hover {
+                padding: 1rem;
+                top: calc($item_h * 2/8 );
+                h4 {
+                    font-size: a.$fontS;
+                    margin-top: 1.33em;
+                }
+                p {
+                    font-size: a.$fontXS;
+                }
+            }
+            .cards__item {
+                &:hover .cards__item__hover {
+                    top: calc($item_h * 1/8 );
+                }
+            }
         }
     }
 }

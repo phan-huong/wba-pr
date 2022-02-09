@@ -11,18 +11,26 @@
             <?php if( have_rows('collapse_items') ) : 
                 while ( have_rows('collapse_items') ) : the_row(); 
                     $item_titel = get_sub_field('item_titel');
-                    $bkg_img = get_sub_field('bkg_img'); 
-                    $button_text = get_sub_field('button_text'); 
-                    $button_link = get_sub_field('button_link'); 
+                    $bkg_img = get_sub_field('bkg_img');
+                    $button_oder_text = get_sub_field('button_oder_text'); 
                     $index = get_row_index(); ?>
 
                     <div class="collapse__item<?php echo ($index == 1) ? ' collapse_active' : null ?>">
                         <img src="<?php echo $bkg_img ?>" alt="<?php echo $item_titel ?>">
-                        <div class="collapse__item__content">
+                        <div class="collapse__item__content<?php echo ($button_oder_text == 'button') ? null : ' with_text' ?>">
                             <h2><?php echo $item_titel ?></h2>
-                            <button class="btn_arrow" onclick="window.open('<?php echo $button_link ?>')">
-                                <?php echo $button_text ?>
-                            </button>
+                            <?php if ($button_oder_text == 'button') : 
+                                $button_text = get_sub_field('button_text'); 
+                                $button_link = get_sub_field('button_link'); ?>
+                                <button class="btn_arrow" onclick="window.open('<?php echo $button_link ?>')">
+                                    <?php echo $button_text ?>
+                                </button>
+                            <?php elseif ($button_oder_text == 'text') : 
+                                $text = get_sub_field('text');  ?>
+                                <div class="collapse__item__content__text">
+                                    <?php echo $text ?>
+                                </div>
+                            <?php else : null; endif; ?>
                         </div>
                     </div>
 

@@ -60,6 +60,12 @@
                 @include b.font(2.5rem, 200, white);
                 @include b.font-fam('meno-banner', serif);
             }
+
+            &.with_text {
+                .collapse__item__content__text {
+                    display: none;
+                }
+            }
         }
     }
 }
@@ -73,10 +79,6 @@
         filter: brightness(100%);
     }
 
-    button {
-        display: block;
-    }
-
     .collapse__item__content {
         display: flex;
         flex-direction: column;
@@ -84,6 +86,23 @@
         color: white;
         transform: rotate(0deg) translateY(-10vh);
         padding-left: 15%;
+
+        button {
+            display: block;
+        }
+    }
+
+    .collapse__item__content.with_text {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        color: white;
+        transform: rotate(0deg) translateY(10vh);
+        padding-left: 15%;
+
+        .collapse__item__content__text {
+            display: block;
+        }
     }
 }
 
@@ -93,6 +112,13 @@
             .collapse_active {
                 .collapse__item__content {
                     padding-left: 3rem;
+                }
+                .collapse__item__content.with_text {            
+                    .collapse__item__content__text {
+                        display: block;
+                        white-space: normal;
+                        padding-right: 1rem;
+                    }
                 }
             }
         }
@@ -113,6 +139,13 @@
                 .collapse__item__content {
                     padding-left: 2.5rem;
                 }
+                .collapse__item__content.with_text {            
+                    .collapse__item__content__text {
+                        display: block;
+                        white-space: normal;
+                        padding-right: 1rem;
+                    }
+                }
             }
         }
     }
@@ -131,6 +164,12 @@
             .collapse_active {
                 .collapse__item__content {
                     padding-left: 2.5rem;
+                }
+                .collapse__item__content.with_text {            
+                    .collapse__item__content__text {
+                        display: block;
+                        white-space: normal;
+                    }
                 }
             }
         }
@@ -163,10 +202,8 @@
 @media screen and (max-width: 540px) and (min-height: 540px) {
     .collapse_wrapper {
         padding-top: a.$spaceM;
-
         .collapse_headlines {
             padding: 0 3rem;
-
             h3 {
                 font-size: a.$fontM;
             }
@@ -174,10 +211,8 @@
                 font-size: 2rem;
             }
         }
-
         .collapse {
             padding: 2rem 0;
-
             &__item {
                 &__content {
                     h2 {
@@ -191,6 +226,17 @@
                     white-space: normal;
                     transform: rotate(0deg) translateY(-5vh);
                 }
+                .collapse__item__content.with_text {    
+                    transform: rotate(0deg) translateY(6vh);
+                    .collapse__item__content__text {
+                        display: block;
+                        white-space: normal;
+                        font-size: a.$fontXXS;
+                        p {
+                            margin: 0;
+                        }
+                    }
+                }
             }
         }
     }
@@ -199,7 +245,6 @@
 @media screen and (max-width: 540px) and (max-height: 539px) {
     .collapse_wrapper {
         padding-top: a.$spaceM;
-
         .collapse_headlines {
             padding: 0 3rem;
 
@@ -210,7 +255,6 @@
                 font-size: 2rem;
             }
         }
-
         .collapse {
             padding: 2rem 0;
 
@@ -227,6 +271,17 @@
                     white-space: normal;
                     transform: rotate(0deg) translateY(-5vh);
                 }
+                .collapse__item__content.with_text {    
+                    transform: rotate(0deg) translateY(15vh);
+                    .collapse__item__content__text {
+                        display: block;
+                        white-space: normal;
+                        font-size: a.$fontXXS;
+                        p {
+                            margin: 0;
+                        }
+                    }
+                }
             }
         }
     }
@@ -235,7 +290,6 @@
 @media screen and (max-width: 375px) {
     .collapse_wrapper {
         padding-top: a.$spaceM;
-
         .collapse_headlines {
             padding: 0 2rem;
 
@@ -246,10 +300,8 @@
                 font-size: 1.5rem;
             }
         }
-
         .collapse {
             padding: 2rem 0;
-
             &__item {
                 &__content {
                     h2 {
@@ -262,6 +314,17 @@
                     padding-left: 1rem;
                     white-space: normal;
                     transform: rotate(0deg) translateY(-5vh);
+                }
+                .collapse__item__content.with_text {    
+                    transform: rotate(0deg) translateY(6vh);
+                    .collapse__item__content__text {
+                        display: block;
+                        white-space: normal;
+                        font-size: a.$fontXXS;
+                        p {
+                            margin: 0;
+                        }
+                    }
                 }
             }
         }
