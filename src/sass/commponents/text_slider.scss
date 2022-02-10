@@ -1,0 +1,64 @@
+@use '../variables.scss' as a;
+@use '../mixin.scss' as b;
+
+.text_slider {
+    width: 50%;
+    background-image: linear-gradient(180deg, rgb(26, 24, 24, 0.8), rgb(26, 24, 24, 0.65));
+    backdrop-filter: blur(15px);
+    position: absolute;
+    bottom: 0;
+
+    .splide__track {
+        .splide__list {
+            .splide__slide {
+                padding: 2rem;
+                &__container {
+                    color: white;
+                    border: 1px solid #D6BA77;
+                    height: 100%;
+
+                    h3 {
+                        padding: 5rem 3rem 0 3rem;
+                    }
+                    h2 {
+                        padding: 0 3rem;
+                    }
+                    .text_slider__content {
+                        padding: 0 3rem;
+                    }
+                    .text_slider__btn {
+                        padding: 2rem 3rem 3rem 3rem;
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                }
+            }
+        }
+    }
+
+    .splide__arrow--prev, .splide__arrow--next {
+        background-color: transparent;
+        img {
+            width: 45px;
+            height: 35px;
+        }
+    }
+    .splide__arrow--prev {
+        top: 5rem;
+        left: 5.5rem;
+    }
+    .splide__arrow--next {
+        top: 5rem;
+        left: 12rem;
+    }
+
+    .slider__pagination {
+        position: absolute;
+        top: 5rem;
+        right: 9rem;
+        color: #D6BA77;
+        p {
+            margin: 0;
+        }
+    }
+}

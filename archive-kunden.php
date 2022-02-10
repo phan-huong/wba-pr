@@ -15,7 +15,7 @@
                 );
                 if( $kunden->have_posts() ) : while( $kunden->have_posts() ) : $kunden->the_post(); ?>
                     <div class="kunden__item">
-                        <?php the_post_thumbnail(); ?>
+                        <?php the_post_thumbnail('post-thumbnail', ''); ?>
                         <img class="kunden__item__logo" src="<?php the_field('kundenlogo') ?>" alt="<?php the_title() ?>">
                         <div class="kunden__item__link">
                             <a onclick="window.open('<?php the_permalink() ?>')">

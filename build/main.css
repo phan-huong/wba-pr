@@ -1135,7 +1135,7 @@ footer .footer__wrapper__inner .footer__info__sitemap__items li:not(:first-of-ty
   display: flex;
 }
 .kunden__item img:first-of-type {
-  max-width: 100% !important;
+  width: 100% !important;
   height: auto;
   object-fit: cover;
   opacity: 0.45;
@@ -1251,6 +1251,20 @@ footer .footer__wrapper__inner .footer__info__sitemap__items li:not(:first-of-ty
     grid-row-gap: 2rem;
   }
 }
+.kunden_hero {
+  position: relative;
+  width: 100%;
+  padding: 4rem 0;
+}
+.kunden_hero__logo {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+}
+.kunden_hero__logo img {
+  padding-right: 15%;
+}
+
 .nav {
   position: fixed;
   display: flex;
@@ -1865,4 +1879,57 @@ footer .footer__wrapper__inner .footer__info__sitemap__items li:not(:first-of-ty
   .paragraph__right__inner .btn_icon_fade_wrapper {
     padding-top: 1.5rem;
   }
+}
+.text_slider {
+  width: 50%;
+  background-image: linear-gradient(180deg, rgba(26, 24, 24, 0.8), rgba(26, 24, 24, 0.65));
+  backdrop-filter: blur(15px);
+  position: absolute;
+  bottom: 0;
+}
+.text_slider .splide__track .splide__list .splide__slide {
+  padding: 2rem;
+}
+.text_slider .splide__track .splide__list .splide__slide__container {
+  color: white;
+  border: 1px solid #D6BA77;
+  height: 100%;
+}
+.text_slider .splide__track .splide__list .splide__slide__container h3 {
+  padding: 5rem 3rem 0 3rem;
+}
+.text_slider .splide__track .splide__list .splide__slide__container h2 {
+  padding: 0 3rem;
+}
+.text_slider .splide__track .splide__list .splide__slide__container .text_slider__content {
+  padding: 0 3rem;
+}
+.text_slider .splide__track .splide__list .splide__slide__container .text_slider__btn {
+  padding: 2rem 3rem 3rem 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+.text_slider .splide__arrow--prev, .text_slider .splide__arrow--next {
+  background-color: transparent;
+}
+.text_slider .splide__arrow--prev img, .text_slider .splide__arrow--next img {
+  width: 45px;
+  height: 35px;
+}
+.text_slider .splide__arrow--prev {
+  top: 5rem;
+  left: 5.5rem;
+}
+.text_slider .splide__arrow--next {
+  top: 5rem;
+  left: 12rem;
+}
+.text_slider .slider__pagination {
+  position: absolute;
+  top: 5rem;
+  right: 9rem;
+  color: #D6BA77;
+}
+.text_slider .slider__pagination p {
+  margin: 0;
 }

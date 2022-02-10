@@ -30,6 +30,7 @@ add_filter('nav_menu_css_class' , 'add_active_nav' , 10 , 2);
 
 /** JS scripts */
 add_action('wp_enqueue_scripts', function() {
+    wp_enqueue_script( 'splidejs-script', get_stylesheet_directory_uri().'/build/splide.min.js' , [] , '1.0.0' , true );
     wp_enqueue_script( 'main-script', get_stylesheet_directory_uri().'/build/main.js' , [] , '1.0.0' , true );
 });
 

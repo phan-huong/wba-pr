@@ -6,6 +6,8 @@
         <meta name="description" content="<?php bloginfo('description'); ?>">
         <title><?php the_field('company_name', 'options') ?> > <?php is_front_page() ? the_field('company_slogan', 'options') : wp_title(''); ?></title>
         <link rel="icon" href="<?php the_field('company_icon', 'options'); ?>">
+        <!--Splide JS -->
+        <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/build/splide.min.css">
         <!-- Main theme Min CSS -->
         <link rel="stylesheet" href="https://use.typekit.net/rvo1mtx.css">
         <link href="https://api.fontshare.com/css?f[]=switzer@100,101,200,201,300,301,400,401,500,501,600,601,700,701,800,801,900,901,1,2&display=swap" rel="stylesheet">

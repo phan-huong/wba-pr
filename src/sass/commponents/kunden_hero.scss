@@ -1,0 +1,14 @@
+.kunden_hero {    
+    position: relative;
+    width: 100%;
+    padding: 4rem 0;
+
+    &__logo {
+        width: 100%;
+        display: flex;
+        justify-content: right;
+        img {
+            padding-right: 15%;
+        }
+    }
+}
