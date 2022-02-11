@@ -20,6 +20,7 @@
                     h3 {
                         padding: 5rem 3rem 0 3rem;
                         @include b.font(1.25rem, 200, white);
+                        text-transform: uppercase;
                     }
                     h2 {
                         padding: 0 3rem;
