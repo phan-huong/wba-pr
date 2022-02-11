@@ -8,7 +8,31 @@
         display: flex;
         justify-content: right;
         img {
-            padding-right: 15%;
+            padding-right: 20%;
+        }
+    }
+}
+
+@media screen and (max-width: 1360px) {
+    .kunden_hero {
+        padding: 6rem 0;
+        &__logo {
+            img {
+                padding-right: 15%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .kunden_hero {
+        padding: 0;
+        transform: translateY(-4rem);
+        &__logo {
+            justify-content: center;
+            img {
+                padding-right: 0;
+            }
         }
     }
 }

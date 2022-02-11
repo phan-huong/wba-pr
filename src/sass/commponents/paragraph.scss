@@ -6,7 +6,7 @@
     color: white;
   
     &__left {
-        width: 55vw;
+        width: 55%;
         display: flex;
     
         img {
@@ -16,7 +16,7 @@
     }
   
     &__right {
-        width: calc(50vw - 4rem);
+        width: calc(50% - 4rem);
         padding: 2rem;
         display: flex;
         position: absolute;
@@ -177,13 +177,13 @@
         padding-bottom: 0 !important;
 
         &__left {
-            width: 100vw;
+            width: 100%;
         }
 
         &__right {
             height: auto;
             position: relative;
-            width: calc(100vw - 4rem);
+            width: calc(100% - 4rem);
             transform: translateY(-4rem) !important;
 
             &__inner {
@@ -241,7 +241,7 @@
     .paragraph {
         &__right {
             padding: 1.5rem;
-            width: calc(100vw - 3rem);
+            width: calc(100% - 3rem);
             &__inner {
                 padding: 1.5rem;
                 .paragraph__headlines {

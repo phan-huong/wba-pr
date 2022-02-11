@@ -19,9 +19,12 @@
 
                     h3 {
                         padding: 5rem 3rem 0 3rem;
+                        @include b.font(1.25rem, 200, white);
                     }
                     h2 {
                         padding: 0 3rem;
+                        @include b.font(2.5rem, 200, a.$colorHeadL);
+                        @include b.font-fam('meno-banner', serif);
                     }
                     .text_slider__content {
                         padding: 0 3rem;
@@ -54,11 +57,197 @@
 
     .slider__pagination {
         position: absolute;
-        top: 5rem;
+        top: 4.5rem;
         right: 9rem;
         color: #D6BA77;
         p {
             margin: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1360px) {
+    .text_slider {
+        .splide__track {
+            .splide__list {
+                .splide__slide {
+                    &__container {
+                        h3 {
+                            @include b.font(1.125rem, 200, white);
+                        }
+                        h2 {
+                            @include b.font(2rem, 200, a.$colorHeadL);
+                        }
+                        .text_slider__content {
+                            font-size: a.$fontXS;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1240px) {
+    .text_slider {
+        .splide__track {
+            .splide__list {
+                .splide__slide {
+                    &__container {
+                        .text_slider__btn {
+                            .btn_icon_animated_wrapper {
+                                transform: scale(0.8) translateX(-1rem);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .text_slider {
+        position: relative;
+        width: calc(100%);
+        .splide__track {
+            .splide__list {
+                .splide__slide {
+                    &__container {
+                        
+                        .text_slider__btn {
+                            .btn_icon_animated_wrapper {
+                                transform: scale(0.8) translateX(-1rem);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .text_slider {
+        .splide__track {
+            .splide__list {
+                .splide__slide {
+                    &__container {
+                        h3 {
+                            padding: 5rem 1rem 0 1rem;
+                            @include b.font(a.$fontS, 200, white);
+                        }
+                        h2 {
+                            padding: 0 1rem;
+                            @include b.font(2rem, 200, a.$colorHeadL);
+                        }
+                        .text_slider__content {
+                            padding: 0 1rem;
+                        }
+                        .text_slider__btn {
+                            padding: 2rem 1rem 3rem 1rem;
+                            .btn_icon_animated_wrapper {
+                                transform: scale(0.7) translateX(-2rem);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .splide__arrow--prev {
+            left: 3.5rem;
+        }
+        .splide__arrow--next {
+            left: 9rem;
+        }
+        .slider__pagination {
+            right: 6rem;
+        }
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .text_slider {
+        .splide__track {
+            .splide__list {
+                .splide__slide {
+                    padding: 1.5rem;
+                    &__container {
+                        h3 {
+                            padding: 5rem 1rem 0 1rem;
+                            @include b.font(a.$fontXS, 200, white);
+                        }
+                        h2 {
+                            padding: 0 1rem;
+                            @include b.font(1.8rem, 200, a.$colorHeadL);
+                        }
+                        .text_slider__content {
+                            padding: 0 1rem;
+                            font-size: a.$fontXS;
+                        }
+                        .text_slider__btn {
+                            padding: 1rem 1rem 0rem 1rem;
+                            flex-direction: column;
+                            .btn_icon_animated_wrapper {
+                                transform: scale(0.8) translateX(0);
+                                padding-bottom: 2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .splide__arrow--prev {
+            left: 3.5rem;
+        }
+        .splide__arrow--next {
+            left: 9rem;
+        }
+        .slider__pagination {
+            right: 6rem;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .text_slider {
+        .splide__track {
+            .splide__list {
+                .splide__slide {
+                    padding: 1.5rem;
+                    &__container {
+                        h3 {
+                            padding: 5rem 1rem 0 1rem;
+                            @include b.font(a.$fontXS, 200, white);
+                        }
+                        h2 {
+                            padding: 0 1rem;
+                            @include b.font(1.8rem, 200, a.$colorHeadL);
+                        }
+                        .text_slider__content {
+                            padding: 0 1rem;
+                            font-size: a.$fontXS;
+                        }
+                        .text_slider__btn {
+                            padding: 1rem 1rem 0rem 1rem;
+                            flex-direction: column;
+                            .btn_icon_animated_wrapper {
+                                transform: scale(0.8) translateX(0);
+                                padding-bottom: 2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .splide__arrow--prev {
+            left: 3rem;
+        }
+        .splide__arrow--next {
+            left: 8rem;
+        }
+        .slider__pagination {
+            right: 4.5rem;
         }
     }
 }

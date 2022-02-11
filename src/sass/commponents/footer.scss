@@ -224,6 +224,7 @@ footer {
                         padding-left: 2rem;
                     }
                     &__sitemap {
+                        grid-column: 1 / span 2;
                         &__items {
                             li {
                                 &:not(:first-of-type) {
@@ -328,6 +329,7 @@ footer {
                         text-align: center;
                     }
                     &__sitemap {
+                        grid-column: auto;
                         &__items {
                             li {
                                 &:not(:first-of-type) {
