@@ -42,7 +42,7 @@ function init_remove_support()  {
     remove_post_type_support($post_type, 'editor');
 }
 
-/** Register Custom Post Type */
+/** Register Custom Post Type - Kunden */
 function create_kunden_post_type() {
     $label = array(
         'name' => 'Kunden',
@@ -79,6 +79,44 @@ function create_kunden_post_type() {
 add_action( 'init', 'create_kunden_post_type' );
 
 add_theme_support( 'post-thumbnails', array( 'kunden' ) );
+
+/** Register Custom Post Type - News */
+function create_news_post_type() {
+    $label = array(
+        'name' => 'News',
+        'singular_name' => 'News'
+    );
+	$args = array(
+        'labels' => $label,
+        'description' => 'News von Kunden von WBA PR',
+        'supports' => array(
+            'title',
+            'author',
+            'thumbnail',
+            'comments',
+            'revisions',
+            'custom-fields'
+            ),
+        'taxonomies' => array( 
+            'category', 
+            'post_tag' 
+        ),
+        'has_archive' => true,
+        'hierarchical' => false,
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'show_in_nav_menus' => true,
+        'show_in_admin_bar' => true,
+        'menu_icon' => 'dashicons-media-text',
+        'capability_type' => 'post'
+	);
+	register_post_type( 'news' , $args );
+}
+
+add_action( 'init', 'create_news_post_type' );
+
+add_theme_support( 'post-thumbnails', array( 'news' ) );
 
 
 /** Polylang translate slug - deactivated */

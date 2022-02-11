@@ -39,7 +39,7 @@
                                                             $link_text = get_sub_field('link_text');
                                                             $link_url = get_sub_field('link_url'); ?>
 
-                                                            <a href="><?php echo $link_url ?>"><?php echo $link_text ?></a>
+                                                            <a href="<?php echo $link_url ?>"><?php echo $link_text ?></a>
 
                                                         <?php else : null; endif; ?>
                                                     </div>

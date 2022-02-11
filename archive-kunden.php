@@ -6,8 +6,8 @@
             <?php
                 $kunden = new WP_Query( array(
                     'post_type' => 'kunden',
-                    'orderby' => 'date',
-                    // 'order' => 'asc',
+                    // 'orderby' => 'date',
+                    'order' => 'asc',
                     'post_status' => 'publish',
                     // 'paged' => 1,
                     'posts_per_page' => -1
