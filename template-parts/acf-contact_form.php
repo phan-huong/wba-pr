@@ -7,5 +7,15 @@
             <h3><?php echo $headline_S ?></h3>
         </div>
         <?php echo get_sub_field( 'contact_form' ); ?>	
+        <div class="contact_form__infos">
+            <div class="contact_form__phone">
+                <p>Phone</p>
+                <a href="tel:+">+49 (0) 2644. 9 45 71 55</a>
+            </div>
+            <div class="contact_form__mail">
+                <p>Mail</p>
+                <a href="mailto:pr@wbapr.de">pr@wbapr.de</a>
+            </div>
+        </div>
     </section>
 <?php endif; ?>	

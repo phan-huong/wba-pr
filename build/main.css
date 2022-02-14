@@ -702,6 +702,88 @@ button {
     margin: 0;
   }
 }
+.contact_form {
+  padding: 6rem 12rem;
+}
+.contact_form__headlines h2 {
+  font-size: 2.5rem;
+  font-weight: 200;
+  color: #D8BC79;
+  font-family: "meno-banner", serif;
+  margin: 0;
+  padding-bottom: 1rem;
+}
+.contact_form__headlines h3 {
+  font-size: 1.8rem;
+  font-weight: 200;
+  color: white;
+  font-family: "meno-banner", serif;
+  margin: 0;
+}
+.contact_form .wpcf7 {
+  color: white;
+  padding: 3rem 0;
+}
+.contact_form .wpcf7 form {
+  display: grid;
+  grid-template-columns: 4fr 5fr;
+  grid-column-gap: 2rem;
+}
+.contact_form .wpcf7 form p label span input, .contact_form .wpcf7 form textarea {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #d6ba77;
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 200;
+  color: white;
+  font-family: "Switzer", sans-serif;
+  width: 80%;
+}
+.contact_form .wpcf7 form p label span input:focus-visible, .contact_form .wpcf7 form textarea:focus-visible {
+  outline: none;
+}
+.contact_form .wpcf7 form p:nth-of-type(4) {
+  grid-row: 2/span 2;
+  grid-column-start: 2;
+}
+.contact_form .wpcf7 form p:nth-of-type(6), .contact_form .wpcf7 form p:nth-of-type(7) {
+  grid-column: 1/span 2;
+}
+.contact_form .wpcf7 form .wpcf7-radio span:first-of-type {
+  margin-left: 0;
+}
+.contact_form .wpcf7 form .wpcf7-acceptance > span {
+  margin-left: 0;
+}
+.contact_form .wpcf7 form .wpcf7-submit {
+  padding: 0.5rem 1.5rem;
+  background-color: #C8AA6A;
+  font-size: 0.9rem;
+  font-weight: 200;
+  color: white;
+  font-family: "Switzer", sans-serif;
+  cursor: pointer;
+  border: none;
+}
+.contact_form .wpcf7 form .wpcf7-submit:hover {
+  background-color: #A28048;
+}
+.contact_form__infos {
+  display: flex;
+  justify-content: right;
+  padding-right: 10%;
+}
+.contact_form__infos div {
+  padding: 1rem;
+  border: 1px solid #d6ba77;
+  margin-left: 3rem;
+}
+.contact_form__infos div p {
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
 footer {
   background-color: #0d0b0b;
   padding: 6rem;

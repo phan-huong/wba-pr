@@ -1,0 +1,93 @@
+@use '../variables.scss' as a;
+@use '../mixin.scss' as b;
+
+.contact_form {
+    padding: 6rem 12rem;
+
+    &__headlines {
+        h2 {
+            @include b.font(2.5rem, 200, a.$colorHeadL);
+            @include b.font-fam('meno-banner', serif);
+            margin: 0;
+            padding-bottom: 1rem;
+        }
+        h3 {
+            @include b.font(1.8rem, 200, white);
+            @include b.font-fam('meno-banner', serif);
+            margin: 0;
+        }
+    }
+
+    .wpcf7 {
+        color: white;
+        padding: 3rem 0;
+
+        form {
+            display: grid;
+            grid-template-columns: 4fr 5fr;
+            grid-column-gap: 2rem;
+
+            p label span input, textarea {
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid a.$colorBorder;
+                margin-top: 1rem;
+                @include b.font(a.$fontS, 200, white);
+                @include b.font-fam('Switzer', sans-serif);
+                width: 80%;
+
+                &:focus-visible {
+                    outline: none;
+                }
+            }
+
+            p:nth-of-type(4) {
+                grid-row: 2 / span 2;
+                grid-column-start: 2;
+            }
+            p:nth-of-type(6), p:nth-of-type(7) {
+                grid-column: 1 / span 2;
+            }
+            .wpcf7-radio {
+                span:first-of-type {
+                    margin-left: 0;
+                }
+            }
+            .wpcf7-acceptance {
+                & > span {
+                    margin-left: 0;
+                }
+            }
+            .wpcf7-submit {
+                padding: 0.5rem 1.5rem;
+                background-color: #C8AA6A;
+                @include b.font(a.$fontXS, 200, white);
+                @include b.font-fam('Switzer', sans-serif);
+                cursor: pointer;
+                border: none;
+
+                &:hover {
+                    background-color: #A28048;
+                }
+            }
+        }
+    }
+
+    &__infos {
+        display: flex;
+        justify-content: right;
+        padding-right: 10%;
+
+        div {
+            padding: 1rem;
+            border: 1px solid a.$colorBorder;
+            margin-left: 3rem;
+
+            p {
+                margin: 0;
+                padding-bottom: 0.5rem;
+            }
+        }
+    }
+
+}

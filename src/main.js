@@ -4,10 +4,12 @@ import {collapse} from './js/collapse.js';
 import {paragraph} from './js/paragraph.js';
 import { footer } from './js/footer';
 import { loadmore } from './js/loadmore';
+import {contact_form} from './js/contact_form';
 
 nav_mobile();
 collapse();
 loadmore();
+contact_form();
 
 const loadAndResize = () => {
     paragraph();
