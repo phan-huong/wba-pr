@@ -25,7 +25,7 @@ export const loadmore = () => {
                 }
             });
             if($(".news__item:hidden").length == 0) {
-                $("#loadmore").hide(300);
+                $("#loadmoreNews").hide(300);
             }
         });
     })
