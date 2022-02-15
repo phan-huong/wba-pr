@@ -403,7 +403,7 @@
     }
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 414px) and (max-height: 560px) {
     .nav_mobile__menu {
         .nav_mobile__top {
             .nav_mobile__logo {
@@ -416,6 +416,7 @@
         .nav_mobile__body {
             .nav_mobile__wrapper {
                 padding-top: 0.5rem;
+                flex-direction: column !important;
                 .nav_mobile__items {
                     padding: a.$spaceS;
                     font-size: a.$fontM;
