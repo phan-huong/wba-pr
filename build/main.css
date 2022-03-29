@@ -902,6 +902,7 @@ button {
 footer {
   background-color: #0d0b0b;
   padding: 6rem;
+  padding-bottom: 2rem !important;
 }
 footer .footer__wrapper__outer {
   border: 1px solid #d6ba77;
@@ -956,6 +957,13 @@ footer .footer__wrapper__inner .footer__info__sitemap__items li {
 }
 footer .footer__wrapper__inner .footer__info__sitemap__items li:not(:first-of-type) {
   padding-left: 1rem;
+}
+footer .footer__wrapper__inner .footer__info__sitemap__items li.active a {
+  color: #D8BC79;
+}
+footer .footer_copyright {
+  text-align: center;
+  margin-top: 4rem;
 }
 
 @media screen and (max-width: 1360px) {

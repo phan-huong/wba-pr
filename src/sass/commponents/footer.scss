@@ -4,6 +4,7 @@
 footer {
     background-color: #0d0b0b;
     padding: 6rem;
+    padding-bottom: 2rem !important;
   
     .footer__wrapper {
         &__outer {
@@ -59,11 +60,22 @@ footer {
                             &:not(:first-of-type) {
                                 padding-left: 1rem;
                             }
+
+                            &.active {
+                                a {
+                                    color: a.$colorHeadL;;
+                                }
+                            }
                         }
                     }
                 }
             }
         }
+    }
+
+    .footer_copyright {
+        text-align: center;
+        margin-top: 4rem;
     }
 } 
 

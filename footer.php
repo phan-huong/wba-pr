@@ -1,4 +1,4 @@
-<footer>
+        <footer>
             <div class="footer__wrapper__outer" id="footer_outer"></div>
             <div class="footer__wrapper__inner" id="footer_inner">
                 <div class="footer__social_media">
@@ -31,6 +31,10 @@
                         </ul>
                     </div>
                 </div>
+            </div>
+
+            <div class="footer_copyright">
+                <p>&copy; <?php echo date("Y") ?> WeberBenAmmar PR</p>
             </div>
 
             <!-- Start automatic footer of WP -->
