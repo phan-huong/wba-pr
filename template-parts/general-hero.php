@@ -28,7 +28,4 @@
             <?php endwhile;
         endif; 
     endif; ?>
-
-    <?php echo (is_single() && (get_post_type() == 'kunden')) ? get_template_part('template-parts/kunden', 'slider') : null ?>
-
 </section>

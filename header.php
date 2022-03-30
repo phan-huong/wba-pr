@@ -23,5 +23,10 @@
             <!-- Navigation bar -->
             <?php get_template_part('template-parts/general', 'navigation'); ?>
             <!-- Page Hero -->
-            <?php is_post_type_archive( 'kunden' ) ? get_template_part('template-parts/kunden', 'hero') : get_template_part('template-parts/general', 'hero'); ?>
+            <?php
+            if (is_post_type_archive( 'kunden' )) : get_template_part('template-parts/kunden', 'hero');
+            elseif (is_singular( 'kunden' )) : get_template_part('template-parts/kunden', 'slider'); 
+            else : get_template_part('template-parts/general', 'hero');
+            endif;
+            ?>
         </header>

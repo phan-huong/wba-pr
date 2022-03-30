@@ -1,0 +1,268 @@
+@use '../variables.scss' as a;
+@use '../mixin.scss' as b;
+
+.kunden_slider {
+    .splide__arrows {
+        position: absolute;
+        width: 100%;
+
+        .splide__arrow--prev, .splide__arrow--next {
+            background-color: transparent;
+            img {
+                width: 45px;
+                height: 35px;
+            }
+        }
+        .splide__arrow--prev {
+            left: 5.5rem;
+        }
+        .splide__arrow--next {
+            left: 12rem;
+        }
+
+        .slider__pagination {
+            position: absolute;
+            left: 40%;
+            color: #D6BA77;
+            z-index: 1;
+            transform: translateY(-0.5rem);
+            p {
+                margin: 0;
+            }
+        }
+    }
+}
+
+.kunden_infobox {
+    width: 50%;
+    background-image: linear-gradient(180deg, rgb(26, 24, 24, 0.8), rgb(26, 24, 24, 0.65));
+    backdrop-filter: blur(15px);
+    position: absolute;
+    bottom: 0;
+
+
+    .kunden_infobox__outer {
+        padding: 2rem;
+        .kunden_infobox__inner {
+            color: white;
+            border: 1px solid #D6BA77;
+            height: 100%;
+
+            h3 {
+                padding: 5rem 3rem 0 3rem;
+                @include b.font(1.25rem, 200, white);
+                text-transform: uppercase;
+            }
+            h2 {
+                padding: 0 3rem;
+                @include b.font(2.5rem, 200, a.$colorHeadL);
+                @include b.font-fam('meno-banner', serif);
+            }
+            &__content {
+                padding: 0 3rem;
+            }
+            &__btn {
+                padding: 2rem 3rem 3rem 3rem;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1360px) {
+    .kunden_infobox {
+        .kunden_infobox__outer {
+            .kunden_infobox__inner {
+                h3 {
+                    @include b.font(1.125rem, 200, white);
+                }
+                h2 {
+                    @include b.font(2rem, 200, a.$colorHeadL);
+                }
+                &__content {
+                    font-size: a.$fontXS;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1240px) {
+    .kunden_infobox {
+        .kunden_infobox__outer {
+            .kunden_infobox__inner {
+                &__btn {
+                    .btn_icon_animated_wrapper {
+                        transform: scale(0.8) translateX(-1rem);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .kunden_slider {
+        .splide__arrows {
+            bottom: -1rem;
+    
+            .slider__pagination {
+                left: 80%;
+            }
+        }
+    }
+
+    .kunden_infobox {
+        position: relative;
+        width: calc(100%);
+        .kunden_infobox__outer {
+            .kunden_infobox__inner {
+                &__btn {
+                    .btn_icon_animated_wrapper {
+                        transform: scale(0.8) translateX(-1rem);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .kunden_slider {
+        .splide__arrows {
+            bottom: -1rem;
+
+            .splide__arrow--prev {
+                left: 3.5rem;
+            }
+            .splide__arrow--next {
+                left: 9rem;
+            }
+    
+            .slider__pagination {
+                left: 80%;
+            }
+        }
+    }
+
+    .kunden_infobox {
+        .kunden_infobox__outer {
+            .kunden_infobox__inner {
+                h3 {
+                    padding: 5rem 1rem 0 1rem;
+                    @include b.font(a.$fontS, 200, white);
+                }
+                h2 {
+                    padding: 0 1rem;
+                    @include b.font(2rem, 200, a.$colorHeadL);
+                }
+                &__content {
+                    padding: 0 1rem;
+                }
+                &__btn {
+                    padding: 2rem 1rem 3rem 1rem;
+                    .btn_icon_animated_wrapper {
+                        transform: scale(0.7) translateX(-2rem);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .kunden_slider {
+        .splide__arrows {
+            bottom: -1rem;
+
+            .splide__arrow--prev {
+                left: 3.5rem;
+            }
+            .splide__arrow--next {
+                left: 9rem;
+            }
+    
+            .slider__pagination {
+                left: auto;
+                right: 3rem;
+            }
+        }
+    }
+    
+    .kunden_infobox {
+        .kunden_infobox__outer {
+            padding: 1.5rem;
+            .kunden_infobox__inner {
+                h3 {
+                    padding: 5rem 1rem 0 1rem;
+                    @include b.font(a.$fontXS, 200, white);
+                }
+                h2 {
+                    padding: 0 1rem;
+                    @include b.font(1.8rem, 200, a.$colorHeadL);
+                }
+                &__content {
+                    padding: 0 1rem;
+                    font-size: a.$fontXS;
+                }
+                &__btn {
+                    padding: 1rem 1rem 0rem 1rem;
+                    flex-direction: column;
+                    .btn_icon_animated_wrapper {
+                        transform: scale(0.8) translateX(0);
+                        padding-bottom: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .kunden_slider {
+        .splide__arrows {
+            bottom: -1rem;
+
+            .splide__arrow--prev {
+                left: 3rem;
+            }
+            .splide__arrow--next {
+                left: 8rem;
+            }
+    
+            .slider__pagination {
+                left: auto;
+                right: 3rem;
+            }
+        }
+    }
+
+    .kunden_infobox {
+        .kunden_infobox__outer {
+            padding: 1.5rem;
+            .kunden_infobox__inner {
+                h3 {
+                    padding: 5rem 1rem 0 1rem;
+                    @include b.font(a.$fontXS, 200, white);
+                }
+                h2 {
+                    padding: 0 1rem;
+                    @include b.font(1.8rem, 200, a.$colorHeadL);
+                }
+                &__content {
+                    padding: 0 1rem;
+                    font-size: a.$fontXS;
+                }
+                &__btn {
+                    padding: 1rem 1rem 0rem 1rem;
+                    flex-direction: column;
+                    .btn_icon_animated_wrapper {
+                        transform: scale(0.8) translateX(0);
+                        padding-bottom: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}
