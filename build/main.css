@@ -939,6 +939,7 @@ footer .footer__wrapper__inner .footer__social_media__items {
 }
 footer .footer__wrapper__inner .footer__social_media__items li {
   list-style-type: none;
+  cursor: pointer;
 }
 footer .footer__wrapper__inner .footer__info {
   z-index: 10;
@@ -2068,6 +2069,54 @@ footer .footer_copyright {
   }
   .kunden_hero__logo img {
     padding-right: 0;
+  }
+}
+.logo_grid {
+  padding: 0 10% 6rem 10%;
+}
+.logo_grid__first_row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 2rem;
+}
+.logo_grid__first_row img {
+  justify-self: center;
+  align-self: center;
+  opacity: 0.6;
+}
+.logo_grid__second_row {
+  padding: 0 15%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 2rem;
+}
+.logo_grid__second_row img {
+  justify-self: center;
+  align-self: center;
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 768px) {
+  .logo_grid {
+    padding: 0 5% 6rem 5%;
+  }
+  .logo_grid__second_row {
+    padding: 0 10%;
+  }
+}
+@media screen and (max-width: 540px) {
+  .logo_grid {
+    padding: 0 2rem 6rem 2rem;
+  }
+  .logo_grid__first_row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .logo_grid__first_row img:nth-of-type(5) {
+    grid-column: 1/3;
+  }
+  .logo_grid__second_row {
+    padding: 0;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 .nav {
