@@ -5,7 +5,9 @@
                 while ( have_rows('logos_first_row') ) : the_row(); 
                     $logo = get_sub_field('logo'); ?>
 
-                    <img src="<?php echo $logo ?>">
+                    <div class="logo_grid__img">
+                        <img src="<?php echo $logo ?>">
+                    </div>
 
                 <?php endwhile;
             endif; ?>
@@ -15,7 +17,9 @@
                 while ( have_rows('logos_second_row') ) : the_row(); 
                     $logo = get_sub_field('logo'); ?>
 
-                    <img src="<?php echo $logo ?>">
+                    <div class="logo_grid__img">
+                        <img src="<?php echo $logo ?>">
+                    </div>
 
                 <?php endwhile;
             endif; ?>
