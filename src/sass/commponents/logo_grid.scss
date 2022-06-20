@@ -58,7 +58,7 @@
 
 @media screen and (max-width: 540px) {
     .logo_grid {
-        padding: 0 2rem a.$spaceXXL 2rem;
+        padding: 0 2rem a.$spaceXL 2rem;
 
         &__first_row {
             grid-template-columns: repeat(2, 1fr);

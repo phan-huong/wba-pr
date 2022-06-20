@@ -3,22 +3,22 @@
 
 .collapse_wrapper {
     padding-top: a.$spaceXL;
+}
 
-    .collapse_headlines {
-        padding: 0 6rem;
+.collapse_headlines {
+    padding: 0 6rem;
 
-        h3 {
-            @include b.font(a.$fontL, 200, white);
-            text-transform: uppercase;
-            margin: 0;
-        }
+    h3 {
+        @include b.font(a.$fontL, 200, white);
+        text-transform: uppercase;
+        margin: 0;
+    }
 
-        h2 {
-            @include b.font(2.5rem, 200, inherit);
-            @include b.font-fam('meno-banner', serif);
-            margin: 0;
-            padding-top: 1rem;
-        }
+    h2 {
+        @include b.font(2.5rem, 200, inherit);
+        @include b.font-fam('meno-banner', serif);
+        margin: 0;
+        padding-top: 1rem;
     }
 }
 
@@ -202,15 +202,7 @@
 @media screen and (max-width: 540px) and (min-height: 540px) {
     .collapse_wrapper {
         padding-top: a.$spaceM;
-        .collapse_headlines {
-            padding: 0 3rem;
-            h3 {
-                font-size: a.$fontM;
-            }
-            h2 {
-                font-size: 2rem;
-            }
-        }
+
         .collapse {
             padding: 2rem 0;
             &__item {
@@ -240,21 +232,21 @@
             }
         }
     }
+    .collapse_headlines {
+        padding: 0 3rem;
+        h3 {
+            font-size: a.$fontM;
+        }
+        h2 {
+            font-size: 2rem;
+        }
+    }
 }
 
 @media screen and (max-width: 540px) and (max-height: 539px) {
     .collapse_wrapper {
         padding-top: a.$spaceM;
-        .collapse_headlines {
-            padding: 0 3rem;
 
-            h3 {
-                font-size: a.$fontM;
-            }
-            h2 {
-                font-size: 2rem;
-            }
-        }
         .collapse {
             padding: 2rem 0;
 
@@ -285,21 +277,22 @@
             }
         }
     }
+    .collapse_headlines {
+        padding: 0 3rem;
+
+        h3 {
+            font-size: a.$fontM;
+        }
+        h2 {
+            font-size: 2rem;
+        }
+    }
 }
 
 @media screen and (max-width: 375px) {
     .collapse_wrapper {
         padding-top: a.$spaceM;
-        .collapse_headlines {
-            padding: 0 2rem;
 
-            h3 {
-                font-size: a.$fontS;
-            }
-            h2 {
-                font-size: 1.5rem;
-            }
-        }
         .collapse {
             padding: 2rem 0;
             &__item {
@@ -327,6 +320,16 @@
                     }
                 }
             }
+        }
+    }
+    .collapse_headlines {
+        padding: 0 2rem;
+
+        h3 {
+            font-size: a.$fontS;
+        }
+        h2 {
+            font-size: 1.5rem;
         }
     }
 }
